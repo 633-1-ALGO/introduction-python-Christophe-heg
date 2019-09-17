@@ -4,3 +4,18 @@ texte = "ceci est un texte que vous pouvez modifier mais gare aux caracteres spe
 tab_lettres = [
     ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
      'x', 'y', 'z', ' '], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+def frequences_lettres(txt):
+    cpt = 0
+    for element in tab_lettres[0]:
+        freq = txt.count(tab_lettres[0][cpt])
+        tab_lettres[1][cpt] = freq
+        cpt += 1
+
+    print(tab_lettres)
+
+
+frequences_lettres(texte)
+print()
+frequences_lettres("hello world")
+print()
